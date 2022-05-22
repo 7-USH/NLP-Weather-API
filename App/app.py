@@ -1,5 +1,4 @@
-from math import frexp
-from flask import Flask, request, jsonify
+from flask import Flask, request
 import requests
 import nltk
 from dotenv import load_dotenv
