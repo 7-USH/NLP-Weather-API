@@ -25,7 +25,7 @@ def getLocationWeather():
         if(words[1] == 'NNP'):
             location_name = words[0]
     
-    apiKey = os.getenv("apiKey")
+    apiKey = "acc9068ec2056e6e17c02844aa9ca5b8"
     print(type(apiKey))
     completeUrl = "https://api.openweathermap.org/data/2.5/weather?q="+location_name+"&appid="+apiKey
     response = requests.get(completeUrl)
