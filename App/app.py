@@ -3,10 +3,14 @@ import requests
 import nltk
 from dotenv import load_dotenv
 import os
+import logging
+import sys
 
 load_dotenv()
 
 app = Flask(__name__)
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 
 @app.route('/api',methods=['GET'])
 def getLocationWeather():
